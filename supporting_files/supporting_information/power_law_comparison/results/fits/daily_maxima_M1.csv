@@ -1,0 +1,2 @@
+dataset,method,ks_mode,n,n_tail,xmin,alpha,loglik,distance_definition,distance,p_value,p_lower,p_upper,bootstrap_complete,n_exceed,reps,n_failed,n_undefined,n_valid,mc_se,seed,seconds,r_version,status
+daily_maxima,M1 reference-algorithm R (lower-rank KS),lower,395,43,4854155.1583398106,10.520776128248148,-612.61681661986131,lower-rank KS,0.097752456459253345,0.1106,0.1106,0.1106,TRUE,553,5000,0,0,5000,0.0044354850918473391,20261019,51.790,R version 4.5.1 (2025-06-13 ucrt),ok

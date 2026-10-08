@@ -1,0 +1,2 @@
+dataset,method,config,n,n_tail,xmin,alpha,distance_definition,distance,p_value,reps,n_failed,n_valid,mc_se,seed,seconds,package_version,status,note
+daily_maxima,M3 poweRlaw 1.0.0 (ADJUSTED: xmax=Inf),adjusted-xmax,395,43,4854155.1583398106,10.520764787398658,poweRlaw native KS,0.097752069778489492,0.10440000000000001,5000,0,5000,0.004324364461975887,20261070,1161.250,1.0.0,ok,

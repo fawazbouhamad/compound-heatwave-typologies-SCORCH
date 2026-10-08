@@ -1,0 +1,5 @@
+compound_heatwave_type,selected_event_days,number_of_compound_events,longest_event_days,mean_duration_days_per_event,mean_ellipses_per_event,minimum_ellipses_per_event,maximum_ellipses_per_event
+Type 1: Widespread (Isolated),3,3,1,1.0,1.0,1,1
+Type 2: Spatially Clustered,3,3,1,1.0,3.67,3,4
+Type 3: Temporally Clustered,74,20,10,3.7,8.9,2,26
+Type 4: Compound Clustering (Multi-Type),315,25,40,12.6,22.44,3,80

@@ -1,0 +1,20 @@
+{
+  "projection": "+proj=laea +lat_0=28.0 +lon_0=45.0 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+  "projection_centre_lon": 45.0,
+  "projection_centre_lat": 28.0,
+  "units": "km",
+  "pixel_km": 25.0,
+  "nx": 217,
+  "ny": 165,
+  "first_pixel_centre_x_km": -2697.6533354032777,
+  "first_pixel_centre_y_km": -1942.4431064615821,
+  "n_pixels_inside": 31834,
+  "inside_rule_km": 105.0,
+  "inside_rule": "pixel centre within 105 km of the nearest grid-cell centre",
+  "n_centroids": 753,
+  "n_cells": 1800,
+  "tmax_period": [
+    "1940-04-01",
+    "2025-09-30"
+  ]
+}

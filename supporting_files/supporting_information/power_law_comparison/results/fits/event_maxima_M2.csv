@@ -1,0 +1,2 @@
+dataset,method,ks_mode,n,n_tail,xmin,alpha,loglik,distance_definition,distance,p_value,p_lower,p_upper,bootstrap_complete,n_exceed,reps,n_failed,n_undefined,n_valid,mc_se,seed,seconds,r_version,status
+event_maxima,M2 full-KS variant (base R),full,51,19,3585652.3950546649,5.3480923823530473,-282.20129415305638,full KS,0.13542915906538422,0.33600000000000002,0.33600000000000002,0.33600000000000002,TRUE,1680,5000,0,0,5000,0.0066798802384473929,20261120,1.660,R version 4.5.1 (2025-06-13 ucrt),ok

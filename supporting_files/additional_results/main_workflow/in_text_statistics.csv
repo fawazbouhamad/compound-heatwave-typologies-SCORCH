@@ -1,0 +1,28 @@
+statistic,value,unit,where_reported
+local heatwave events,176061.0,count,Section 3.1
+local events per grid cell,97.81166666666667,events per cell,Section 3.1
+local events per grid cell per year,1.1373449612403101,events per cell per year,Section 3.1
+local events per study day,11.186999618757149,events per day,Section 3.1 (the text calls this simultaneous cells)
+mean simultaneous heatwave cells per study day,66.62403100775194,cells per day,Section 3.1 check
+northern Arabian group: ellipses,201.0,count,Section 4
+northern Arabian group: share of all ellipses,26.693227091633464,percent,Section 4
+northern Arabian group: mean area,3.3812686663794924,million km2,Section 4
+northern Arabian group: mean axis ratio,0.6407770402286423,L2/L1,Section 4
+northern Arabian group: northwest-southeast share,52.23880597014925,percent,Section 4
+all other ellipses: ellipses,552.0,count,Section 4
+all other ellipses: share of all ellipses,73.30677290836654,percent,Section 4
+all other ellipses: mean area,1.219176387240714,million km2,Section 4
+all other ellipses: mean axis ratio,0.5672201997642118,L2/L1,Section 4
+all other ellipses: northwest-southeast share,18.84057971014493,percent,Section 4
+"northern Arabian group, Type 4 ellipses: ellipses",174.0,count,Section 4
+"northern Arabian group, Type 4 ellipses: share of all ellipses",23.107569721115535,percent,Section 4
+"northern Arabian group, Type 4 ellipses: mean area",3.5206779475717545,million km2,Section 4
+"northern Arabian group, Type 4 ellipses: mean axis ratio",0.6406428126845701,L2/L1,Section 4
+"northern Arabian group, Type 4 ellipses: northwest-southeast share",54.59770114942529,percent,Section 4
+events containing northern Arabian Type 4 ellipses,22.0,count,Section 4.2.1
+ellipses in those events,459.0,count,Section 4.2.1
+other ellipses of those events: ellipses,285.0,count,Section 4
+other ellipses of those events: share of all ellipses,37.84860557768924,percent,Section 4
+other ellipses of those events: mean area,1.133687036865255,million km2,Section 4
+other ellipses of those events: mean axis ratio,0.5771035417866728,L2/L1,Section 4
+other ellipses of those events: northwest-southeast share,22.105263157894736,percent,Section 4

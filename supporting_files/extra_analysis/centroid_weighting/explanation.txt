@@ -1,0 +1,64 @@
+CENTROID WEIGHTING COMPARISON
+
+What was tested?
+----------------
+A centroid gives one location for a group of heatwave grid cells. This
+comparison checked how that location changes when hotter or more unusual
+temperatures receive more weight.
+
+The saved comparison covers 1-21 August 2010. It uses all heatwave cells on
+each day, rather than calculating a separate centroid for each of the final
+DBSCAN clusters.
+
+Methods
+-------
+The original, unweighted centroid is the average longitude and latitude of
+the cells. For a weighted centroid, each coordinate is multiplied by its
+weight, these products are added, and the sum is divided by the total weight.
+
+Four alternatives were compared with the unweighted location:
+
+1. Tmax: weight = daily maximum temperature in degrees Celsius. Hotter cells
+   have more influence, while all cells in these heatwave groups contribute.
+2. Exceed: weight = Tmax minus the local 95th-percentile temperature threshold,
+   with negative values set to zero. This emphasizes the amount by which a
+   temperature exceeds its local threshold.
+3. PercentileAbove95: weight = the local percentile rank of Tmax minus 95,
+   bounded between 0 and 5. This emphasizes how unusual a temperature is in
+   the local temperature distribution. Percentile rank is different from
+   temperature exceedance in degrees Celsius.
+4. Hybrid: weight = Tmax multiplied by its positive temperature exceedance.
+   This combines absolute temperature with the amount above the threshold.
+
+Files and findings
+------------------
+- centroid_method_comparison_summary_2010-08-01_to_2010-08-21.csv contains
+  84 rows: four methods on each of 21 days. It records the two locations,
+  their separation in kilometres, and the weighting summaries.
+- gifs/ contains one animation per method. Each compares its daily centroid
+  and path with the unweighted centroid and path.
+- Moving Weighted Centroid.py preserves an earlier comparison script and
+  references inputs in the original workspace.
+
+The average separations from the unweighted centroid in the saved table are
+100.7 km for Tmax, 366.9 km for Exceed, 195.8 km for PercentileAbove95, and
+297.6 km for Hybrid. A smaller separation alone does not make a method better.
+These are descriptive comparisons; no statistical significance test is saved.
+
+One difference in the archive needs care: the GIF's percentile formula is
+percentile rank minus 95, as described above. The preserved script instead
+calculates 100 * (Tmax - threshold) / threshold, clipped to 0-5, and calls it
+PercentAboveP95. That is percentage temperature exceedance, not percentile
+rank. The script is therefore not an exact producer of all the saved files.
+
+Choice used in the study and why
+-------------------------------
+The study uses raw Tmax weighting. As explained in the manuscript, it uses
+the observed temperatures directly and gives every member cell a positive
+contribution. The alternatives concentrated influence on a smaller subset
+of cells in the comparisons examined.
+
+In the final analysis, weighting is applied separately to each cluster and
+shifts its centroid only. It does not change the ellipse's size, shape or
+orientation. The saved daily comparison illustrates the choice; it is not a
+test of statistical equivalence for the final 753 clusters.

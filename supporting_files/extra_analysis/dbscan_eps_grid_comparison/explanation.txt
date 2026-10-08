@@ -1,0 +1,66 @@
+DBSCAN NEIGHBOURHOOD-DISTANCE COMPARISON
+
+What was tested?
+----------------
+This comparison tested two lists of candidate neighbourhood distances
+within DBSCAN on the same 395 regionally extensive days. Both methods use
+DBSCAN; the difference is which distances are included in the search.
+
+The two settings
+----------------
+Epsilon (eps) is the distance defining a cell's neighbourhood. Min_samples
+is the number of cells needed in that neighbourhood, including the cell
+itself, for it to be a core cell. Connected core neighbourhoods form clusters,
+and nearby border cells can join them. Other cells are labelled as noise.
+
+Distances here are Euclidean distances in 1-degree grid-cell units, not km.
+
+Method A uses evenly spaced distances:
+  1, 1.5, 2, 2.5, 3, 3.5, 4
+
+Method B uses distances between cell centres on the square grid:
+  1, sqrt(2), 2, sqrt(5), 2*sqrt(2), 3, sqrt(10), sqrt(13), 4
+
+For example, sqrt(2) reaches a diagonal neighbour, while sqrt(5) is the
+distance across two grid steps in one direction and one in the other.
+
+Both lists were crossed with min_samples = 4, 5, ..., 12. This gives 63
+candidate pairs per day for A and 81 for B. The selection rule retains pairs
+giving the most frequent nonzero cluster count. Tied most-frequent counts
+are pooled. Epsilon is averaged over the retained pairs, and min_samples is
+averaged and rounded to the nearest integer, with halves rounded upward.
+
+What the file shows
+-------------------
+overall_method_comparison_summary.csv summarizes agreement across the 395
+days. This was a comparison of cell groupings, before ellipse fitting.
+
+- The same number of clusters was found on 92.4% of days.
+- The complete grouping of cells was identical on 75.2% of days.
+- The adjusted Rand index (ARI) was at least 0.90 on 89.4% of days.
+- Median ARI, normalized mutual information (NMI), and matched-cluster
+  intersection over union (IoU) were all 1.00.
+- The median distance between matched cluster centroids was 0 km.
+- Neither method produced a day with zero clusters.
+
+ARI and NMI compare how cells are grouped, allowing cluster names to differ.
+IoU measures shared cells divided by all cells in either matched cluster.
+A value of 1 indicates full agreement for each of these measures. Noise
+means cells left outside clusters; the table includes agreement measures
+with noise included and with cells labelled as noise by both methods removed.
+
+The baseline columns compare with contiguous, diagonally connected groups.
+"Splitting" and "merging" describe differences from that reference; they
+are not counts of known mistakes. High median agreement also does not mean
+the two methods gave identical results on every day.
+
+Choice used in the study and why
+-------------------------------
+The manuscript uses Method A: distances from 1 to 4 in steps of 0.5, with
+min_samples from 4 to 12. This is a simple, evenly spaced search to describe
+and apply. The saved comparison shows broad agreement with the alternative
+grid, supporting its use without establishing that one grid is always best.
+
+In the final workflow, consecutive selected days share the largest daily
+epsilon and min_samples chosen within that sequence. The distance-grid
+comparison here is the earlier daily sensitivity check.

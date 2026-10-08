@@ -1,0 +1,8 @@
+"model","formula","parameter","value","value_6_decimals"
+"variant3","~ lon + lat + mean_tmax + std_tmax","(Intercept)","-14.225999669504311","-14.226000"
+"variant3","~ lon + lat + mean_tmax + std_tmax","lon","-0.016387583199287341","-0.016388"
+"variant3","~ lon + lat + mean_tmax + std_tmax","lat","0.065120560820585205","0.065121"
+"variant3","~ lon + lat + mean_tmax + std_tmax","mean_tmax","0.091388157345756879","0.091388"
+"variant3","~ lon + lat + mean_tmax + std_tmax","std_tmax","-0.00050547977736141512","-0.000505"
+"variant3","~ lon + lat + mean_tmax + std_tmax","var_sigma2","1.645391601721077","1.645392"
+"variant3","~ lon + lat + mean_tmax + std_tmax","scale_km","277.57792596278443","277.577926"

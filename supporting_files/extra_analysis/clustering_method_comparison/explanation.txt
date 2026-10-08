@@ -1,0 +1,73 @@
+CLUSTERING METHOD COMPARISON
+
+What was tested?
+----------------
+This comparison examined ways to group heatwave grid cells into spatial
+clusters on the same 395 regionally extensive days. The question was how
+the grouping method affects the clusters retained for ellipse fitting.
+
+Methods
+-------
+1. Connected components (baseline): cells belong to the same component if
+   they can be linked through touching heatwave cells, including diagonal
+   neighbours. The earlier workflow then merged nearby components and
+   selected sufficiently large, distant secondary components.
+2. DBSCAN: groups cells through dense neighbourhoods and can leave isolated
+   cells as noise. This historical test used a neighbourhood radius of 1.5
+   grid-cell units and min_samples = 3.
+3. OPTICS: orders cells according to density-based reachability, then extracts
+   clusters from changes in that ordering. This test used min_samples = 3
+   and xi = 0.05, which controls the steepness used to identify clusters.
+4. HDBSCAN: examines density clustering across distance scales and selects
+   stable groups. This test used min_cluster_size = 5 and min_samples = 3.
+
+The density methods used Euclidean distances in grid-cell units, not
+kilometres. Small or nested clusters could be absorbed or excluded by the
+earlier selection rules. All methods then used the same PCA ellipse
+calculation, Tmax-weighted centroid shift, and fixed ellipse scale of 1.25.
+
+What the file shows
+-------------------
+method_summary.csv contains one row per method, with averages over the 395
+days. In this file, a "reportable blob" means a cluster retained after those
+earlier selection rules.
+
+Useful columns are:
+- raw_cluster_count: clusters before the selection rules.
+- reportable_blob_count and reportable_cell_share: retained clusters and
+  the fraction of heatwave cells they contain.
+- suppressed_* and absorbed_cluster_count: excluded or combined clusters.
+- noise_or_other_cells: cells outside the retained clusters; these are not
+  necessarily all cells labelled as noise by the clustering algorithm.
+- reportable_ari_vs_baseline: agreement of the cell groupings with the
+  baseline, measured by the adjusted Rand index (ARI). A value of 1 means
+  identical groupings, regardless of cluster names.
+- centroid_shift_vs_baseline_km: separation between the weighted centroids
+  of the largest retained cluster from each method and the baseline.
+
+The other columns summarize ellipse size, shape, orientation and coverage.
+The baseline is a reference for comparison, not an independently known truth.
+
+Saved findings
+--------------
+                         Baseline   DBSCAN   OPTICS   HDBSCAN
+Mean retained clusters       1.13     2.13     2.30      2.22
+Mean retained cell share    84.9%    97.9%    97.5%     97.5%
+Mean ARI against baseline    1.000    0.710    0.664     0.645
+
+Among the density methods, DBSCAN had the highest average agreement with
+the baseline and the smallest average shift of the largest-cluster centroid
+(77.6 km). These results describe the tested settings, not every possible
+setting of each algorithm. They also use an earlier workflow and should not
+be read as counts or validation of the final 753 clusters.
+
+Choice used in the study and why
+-------------------------------
+The study uses DBSCAN. It does not require the number of clusters in advance,
+can identify irregular spatial groups, and can separate low-density cells
+as noise. The saved comparison also shows that it retained most heatwave
+cells while remaining relatively close to the baseline grouping.
+
+The final analysis selects DBSCAN parameters from a daily parameter search;
+it does not use the fixed 1.5/3 setting from this early comparison. The
+neighbouring dbscan_eps_grid_comparison folder explains that separate test.

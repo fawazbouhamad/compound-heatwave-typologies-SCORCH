@@ -1,0 +1,14 @@
+metric,value,unit
+n_days_with_both_values,9,days
+pearson_r,0.9451500268680584,
+rmse_c,3.181952597385843,degC
+mae_c,3.0178609070954487,degC
+mean_bias_era5_minus_station_c,-3.0178609070954487,degC
+station_warm_season_p95_c,45.0,degC
+era5_warm_season_p95_c,42.1821792602539,degC
+n_threshold_baseline_days,8264,days
+station_event_days_at_or_above_p95,2,days
+era5_event_days_at_or_above_p95,2,days
+n_event_days_with_station_value,2,days
+n_era5_days_in_window,13,days
+n_station_days_in_window,9,days

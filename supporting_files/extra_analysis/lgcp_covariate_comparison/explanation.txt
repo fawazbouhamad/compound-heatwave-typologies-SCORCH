@@ -1,0 +1,71 @@
+LGCP TEMPERATURE-COVARIATE COMPARISON
+
+What was tested?
+----------------
+A log-Gaussian Cox process (LGCP) models where points are more concentrated,
+while allowing additional spatial variation beyond the measured covariates.
+Here, the points are the 760 heatwave-cluster centroids of the historical first analysis (the final analysis has 753).
+
+This earlier comparison tested four combinations of temperature predictors.
+Every model included longitude and latitude, used the same centroids and
+1,800-cell study grid, and was fitted by minimum contrast using the K
+statistic and an exponential spatial covariance model.
+
+Temperature measures and models
+-------------------------------
+The temperature measures summarize daily Tmax during April-September
+1940-2025 at each grid cell:
+- Mean Tmax: the average temperature, describing typical warm-season heat.
+- Standard deviation (SD): the spread around that average, in degrees Celsius.
+- Coefficient of variation (CV): SD divided by the mean, describing spread
+  relative to the mean used in this calculation.
+
+The archived comparison used standardized temperature predictors, marked
+with "_z". Each was centred and scaled across the 1,800 grid cells so that
+its spatial mean was zero and its population standard deviation was one.
+
+Model label   Temperature predictors (longitude and latitude always included)
+baseline      Mean Tmax + CV
+variant1      Mean Tmax only
+variant2      CV only
+variant3      Mean Tmax + SD
+
+The models therefore test whether to include both temperature level and
+variability, and whether variability is expressed as CV or SD.
+
+Files and findings
+------------------
+- tmax_covariate_correlations.csv compares the predictors. Pearson measures
+  linear association; Spearman compares their ranks. The Pearson correlation
+  of mean Tmax with CV is -0.598, compared with -0.220 for mean Tmax with SD.
+  CV and SD are strongly related to each other (0.889).
+- lgcp_model_parameters.csv stores the fitted trend coefficients and spatial
+  covariance parameters for all four models. The standardized mean-Tmax
+  coefficient is positive whenever it is included. The SD coefficient in
+  variant3 is small (-0.0072); this alone is not a significance test.
+- grid_predicted_intensity_all_variants.csv contains the predictors and four
+  fitted intensity values for each grid cell. Values ending in "x1e6" are
+  multiplied by one million for readability. Intensity describes expected
+  centroid density per unit area, not the probability of a heatwave.
+- figures/panel_model_comparison.png compares the four spatial patterns.
+- spatial_risk_lgcp_model_diagnostics.R fits the alternatives and writes
+  diagnostics. spatial_risk_lgcp_figures_final.R draws the comparison from
+  saved coefficients. Their default paths refer to the earlier workspace;
+  they are not steps in the current manuscript reproduction.
+
+These are archived fits. The current manuscript model uses mean Tmax and SD
+in their original temperature units, so its coefficients should be read
+from the current model outputs. This folder does not contain a formal test
+establishing that one of the four models predicts best.
+
+Choice used in the study and why
+-------------------------------
+The study uses mean Tmax and its standard deviation, together with longitude
+and latitude: the predictor combination called variant3 in this comparison.
+
+Mean Tmax describes temperature level, while SD describes absolute
+temperature variability. This keeps both quantities directly interpretable
+in degrees Celsius. The saved correlations also show less overlap between
+mean Tmax and SD than between mean Tmax and CV. These points support the
+choice, without implying that SD was proved to improve predictive accuracy.
+The final LGCP is fitted using all 753 centroids.
