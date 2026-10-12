@@ -48,6 +48,17 @@ each 1° cell, the daily maxima of its complete 4 × 4 block of 0.25° points.
 The reproduction steps start from this prepared file; the earlier processing
 from hourly ERA5 was completed outside this repository.
 
+## Software
+
+The SCORCH method is also available as an R package,
+[scoRch.generator](https://github.com/fawazbouhamad/scoRch.generator), which
+applies the workflow to any gridded daily maximum temperature dataset and is
+verified against the catalogs, tables and model results kept here. The two
+repositories have different roles: the package is the reusable software, with
+its own tests, documentation, demo and citation (its `CITATION.cff`); this
+repository is the research record of the study, holding the scripts that
+produced the published results and the results themselves.
+
 ## Reproduction instructions
 
 See the [reproduction guide](supporting_files/instructions/reproduction_guide.md)
