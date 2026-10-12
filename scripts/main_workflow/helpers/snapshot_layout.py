@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Shared layout functions for the three representative-event figures."""
 import matplotlib.pyplot as plt
 import figure_style as Q

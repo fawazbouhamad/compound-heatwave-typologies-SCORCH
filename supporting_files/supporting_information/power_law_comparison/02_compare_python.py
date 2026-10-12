@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Run the Python powerlaw comparison methods.
 
 Reads: Prepared maximum-area tables; study settings are recorded below.

@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Save complete figures and their unlettered panels.
 
 Panel boxes use fractions of the full image, measured from the upper left.

@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Draw Figures S2 and S3 from the power-law comparisons.
 
 Reads: Prepared maximum-area tables and supplementary comparison results.

@@ -1,5 +1,4 @@
 #!/usr/bin/env Rscript
-# SPDX-License-Identifier: GPL-3.0-only
 # Draw maps from the historical LGCP covariate comparison.
 #
 # Uses saved coefficients from spatial_risk_lgcp_model_diagnostics.R and the

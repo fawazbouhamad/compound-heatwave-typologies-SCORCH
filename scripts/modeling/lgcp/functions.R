@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 # Shared LGCP fitting, prediction, and file-writing functions.
 # Reads: Called by the full-data fit and Appendix C validation.
 # Writes: Returns calculations to the calling script.

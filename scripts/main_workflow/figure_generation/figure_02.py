@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Figure 2: local thresholds and daily heatwave extent.
 
 Panel (a) maps each cell's warm-season 95th-percentile Tmax for 1940–2025.

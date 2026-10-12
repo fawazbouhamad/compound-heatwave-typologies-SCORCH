@@ -1,4 +1,0 @@
-# Test tools. Install after requirements/core.txt (and figures.txt for the
-# figure tests):
-#   python -m pip install -r requirements/dev.txt
-pytest>=8.0

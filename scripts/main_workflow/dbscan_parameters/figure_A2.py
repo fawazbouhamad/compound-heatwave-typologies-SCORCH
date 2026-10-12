@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Figure A2: selected DBSCAN settings by event type.
 
 Writes the full PNG and its panels to output/figures/figure_A2/.

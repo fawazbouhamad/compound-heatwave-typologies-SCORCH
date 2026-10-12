@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 # Run the R power-law comparison methods for Figures S2 and S3.
 # Reads: Prepared maximum-area tables and shared study settings.
 # Writes: supporting_files/supporting_information/power_law_comparison/results/

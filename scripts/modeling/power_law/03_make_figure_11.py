@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Draw Figure 11 from the power-law results.
 
 Reads: supporting_files/additional_results/modeling/power_law/

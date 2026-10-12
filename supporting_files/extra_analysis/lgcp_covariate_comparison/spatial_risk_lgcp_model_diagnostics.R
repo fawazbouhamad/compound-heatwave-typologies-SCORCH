@@ -1,5 +1,4 @@
 #!/usr/bin/env Rscript
-# SPDX-License-Identifier: GPL-3.0-only
 # Compare four LGCP temperature-covariate models.
 #
 # Historical comparison using 760 centroids and 1,800 grid cells. Models use

@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Calculate the DBSCAN summaries used by Figures A1 and A2.
 
 Reads: Cluster and compound-event catalogs.
@@ -124,7 +123,7 @@ def main():
     print(f"Figure A.2: {len(per_day)} days, {len(per_event)} events, events by type {counts}")
     print(statistics[["panel", "group", "n", "mean", "median", "min", "max"]].to_string(index=False))
 
-    f.write_json(f.run_records_dir(config) / "appendix_A.json", {
+    f.write_json(f.REPO_DIR / ".scorch/logs/run-records/appendix_A.json", {
         "script": f.relative_to_repo(__file__),
         "finished_utc": f.now_utc(),
         "runtime_seconds": round(time.time() - started, 1),

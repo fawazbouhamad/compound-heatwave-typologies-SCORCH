@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Prepare the daily and event maximum ellipse areas.
 
 Reads: Ellipse and compound-event catalogs.

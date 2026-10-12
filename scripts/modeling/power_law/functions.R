@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 # Shared power-law fitting and bootstrap functions.
 # Reads: Called by the modeling and supplementary scripts.
 # Writes: Returns calculations to the calling script.

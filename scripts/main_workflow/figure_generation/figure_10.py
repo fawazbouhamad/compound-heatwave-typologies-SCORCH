@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Figure 10: annual event counts and mean duration.
 
 Panel (a) shows event counts by type, excluding years without events.

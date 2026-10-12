@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 # Fit the power laws and run the bootstrap calculations.
 # Reads: supporting_files/additional_results/modeling/power_law/ and shared study settings.
 # Writes: supporting_files/additional_results/modeling/power_law/

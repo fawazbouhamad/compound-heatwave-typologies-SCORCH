@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Figure A1: DBSCAN parameter-selection matrices.
 
 Writes the full PNG and its panels to output/figures/figure_A1/.

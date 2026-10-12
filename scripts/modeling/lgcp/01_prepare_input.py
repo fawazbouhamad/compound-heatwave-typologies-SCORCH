@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Prepare the centroid locations and temperature covariates for the LGCP.
 
 Reads: Processed temperatures, catalogs, and prepared maximum-area tables.
@@ -139,10 +138,8 @@ def main():
     ellipses["area_km2"] = pd.read_csv(ellipse_file,
                                        float_precision="round_trip")["area_km2"]
     events = pd.read_csv(event_file)
-    clusters_file = f.catalog_dir(config, "03_extreme_heatwave_clusters") / "clusters.csv"
-    n_clusters = len(pd.read_csv(clusters_file))
-    if len(ellipses) != n_clusters:
-        raise ValueError(f"{len(ellipses)} ellipses but {n_clusters} clusters in Catalog 3")
+    if len(ellipses) != 753:
+        raise ValueError(f"{len(ellipses)} ellipses, expected 753")
     centroid_x, centroid_y = project_km(ellipses["centroid_lon_weighted"],
                                         ellipses["centroid_lat_weighted"])
     nearest = NearestNeighbors(n_neighbors=1).fit(cells[["x_km", "y_km"]].to_numpy())
@@ -174,12 +171,8 @@ def main():
         "is_daily_largest": ellipses["ellipse_id"].isin(daily_max["ellipse_id"]),
         "is_event_largest": ellipses["ellipse_id"].isin(event_max["ellipse_id"]),
     })
-    n_selected_days = len(pd.read_csv(f.catalog_dir(config, "02_regionally_extensive_heatwaves")
-                                      / "selected_days.csv"))
-    if (centroids["is_daily_largest"].sum() != n_selected_days
-            or centroids["is_event_largest"].sum() != len(events)):
-        raise ValueError("daily/event-largest flags do not give one centroid per selected day "
-                         f"({n_selected_days}) and per event ({len(events)})")
+    if centroids["is_daily_largest"].sum() != 395 or centroids["is_event_largest"].sum() != 51:
+        raise ValueError("daily/event-largest flags do not give 395 and 51 centroids")
     if (centroids["is_event_largest"] & ~centroids["is_daily_largest"]).any():
         raise ValueError("an event-largest centroid is not a daily-largest centroid")
 

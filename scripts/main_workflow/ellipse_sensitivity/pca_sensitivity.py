@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Calculate ellipse purity over the scale-factor grid for Figure B1.
 
 Reads: Cluster-cell catalog and study settings in the shared Python functions.
@@ -160,7 +159,7 @@ def main():
                + [OUTPUT_DIR / "purity_by_cluster.csv",
                   OUTPUT_DIR / "diagonal_summary.csv"])
     # Record of what was read and written (checksums, software versions).
-    f.write_json(f.run_records_dir(config) / "appendix_B.json", {
+    f.write_json(f.REPO_DIR / ".scorch/logs/run-records/appendix_B.json", {
         "script": f.relative_to_repo(__file__),
         "finished_utc": f.now_utc(),
         "runtime_seconds": round(time.time() - started, 1),

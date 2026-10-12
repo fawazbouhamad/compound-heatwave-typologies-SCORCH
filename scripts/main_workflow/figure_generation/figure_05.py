@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Figure 5: representative Type 1 and Type 2 events.
 
 Writes the full PNG and its panels to output/figures/figure_5/.

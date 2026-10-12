@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 """Draw Figure 12 from the fitted LGCP.
 
 Reads: supporting_files/additional_results/modeling/lgcp/
