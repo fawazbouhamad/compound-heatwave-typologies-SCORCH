@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 # Fit the LGCP and predict spatial centroid intensity.
 # Reads: supporting_files/additional_results/modeling/lgcp/ and shared study settings.
 # Writes: supporting_files/additional_results/modeling/lgcp/

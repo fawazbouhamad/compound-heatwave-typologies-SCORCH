@@ -1,0 +1,97 @@
+{
+  "R": {
+    "Version": "4.5.1",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://cloud.r-project.org"
+      }
+    ]
+  },
+  "Packages": {
+    "spatstat": {
+      "Package": "spatstat",
+      "Version": "3.6-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.model": {
+      "Package": "spatstat.model",
+      "Version": "3.7-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.geom": {
+      "Package": "spatstat.geom",
+      "Version": "3.8-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.explore": {
+      "Package": "spatstat.explore",
+      "Version": "3.8-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.random": {
+      "Package": "spatstat.random",
+      "Version": "3.5-0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.data": {
+      "Package": "spatstat.data",
+      "Version": "3.1-9",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.univar": {
+      "Package": "spatstat.univar",
+      "Version": "3.2-0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.utils": {
+      "Package": "spatstat.utils",
+      "Version": "3.2-3",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.sparse": {
+      "Package": "spatstat.sparse",
+      "Version": "3.2-0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "spatstat.linnet": {
+      "Package": "spatstat.linnet",
+      "Version": "3.5-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "poweRlaw": {
+      "Package": "poweRlaw",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "pracma": {
+      "Package": "pracma",
+      "Version": "2.4.6",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "yaml": {
+      "Package": "yaml",
+      "Version": "2.3.10",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
+    "jsonlite": {
+      "Package": "jsonlite",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scorch-compound-heatwaves"
+version = "1.0.0"
+description = "SCORCH: Spatiotemporal Classification of Regional Compound Heatwaves"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE.txt"]
+requires-python = ">=3.11"
+authors = [
+  { name = "Fawaz Bouhamad" },
+  { name = "Nasser Najibi" },
+]
+keywords = ["heatwaves", "compound events", "climate extremes", "DBSCAN", "ERA5", "spatiotemporal clustering"]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+
+# Core calculation dependencies (the five stages, the demo and the tests).
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scipy>=1.11",
+  "scikit-learn>=1.3",
+  "netCDF4>=1.6",
+  "cftime>=1.6",
+  "pyshp>=2.3",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# Maps and plots (manuscript figures and the demo overview figure).
+figures = [
+  "matplotlib>=3.8",
+  "cartopy>=0.22",
+  "shapely>=2.0",
+  "pillow>=10.0",
+  "pyproj>=3.6",
+]
+# Preparation of the LGCP model input (the fits themselves run in R).
+modeling = ["pyproj>=3.6"]
+# Tests and development tools.
+dev = ["pytest>=7.4"]
+all = ["scorch-compound-heatwaves[figures,modeling,dev]"]
+
+[project.scripts]
+scorch = "scorch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH"
+Documentation = "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH/blob/main/README.md"
+Issues = "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH/issues"
+Dataset = "https://doi.org/10.5281/zenodo.21717874"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "study: needs the full study input (set SCORCH_STUDY_INPUT to tmax_processed.nc)",
+  "slow: takes more than about a minute",
+]

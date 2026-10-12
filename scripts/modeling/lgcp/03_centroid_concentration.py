@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Measure centroid concentration within the fitted intensity zones.
 
 Reads: supporting_files/additional_results/modeling/lgcp/

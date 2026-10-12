@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Compare Aswan station temperatures with the containing ERA5 cell and draw Figure S1.
 
 Reads: supporting_files/supporting_information/station_comparison/input/ghcnd_aswan_EG000062414.csv,

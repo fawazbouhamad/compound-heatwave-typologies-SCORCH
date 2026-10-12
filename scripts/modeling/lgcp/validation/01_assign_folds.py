@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Assign the centroid observations to five validation folds.
 
 Reads: supporting_files/additional_results/modeling/lgcp/centroids.csv and shared Python study settings.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure 1: workflow schematic.
 
 Exports the editable PowerPoint to output/figures/figure_1/figure_1.png.

@@ -1,0 +1,74 @@
+# Citation metadata for the SCORCH software (Citation File Format 1.2.0).
+# The software release and the processed dataset are separate records:
+#   software: this repository, version 1.0.0 (Zenodo software DOI to be added
+#             once the GitHub release is archived; see docs/release_checklist.md)
+#   dataset:  "Processed ERA5 daily maximum temperature data for SCORCH,
+#             1940-2025", version 1.0.0, DOI 10.5281/zenodo.21717874
+cff-version: 1.2.0
+message: >-
+  If you use SCORCH, please cite this software release. When you use the
+  study results, also cite the processed dataset (DOI 10.5281/zenodo.21717874)
+  and the article once it is published.
+type: software
+title: "SCORCH: Spatiotemporal Classification of Regional Compound Heatwaves"
+version: 1.0.0
+date-released: "2026-10-11"
+license: GPL-3.0-only
+repository-code: "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH"
+url: "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH"
+abstract: >-
+  SCORCH identifies regionally extensive compound heatwaves in daily maximum
+  temperature fields. In five stages it detects local heatwaves at every grid
+  cell, selects regionally extensive days, groups the heatwave cells of each
+  day with DBSCAN, fits a PCA ellipse and a temperature-weighted centroid to
+  every cluster, and joins consecutive days into compound events of four
+  types. The repository holds the Python package and command-line tool, the
+  R scripts of the power-law and log-Gaussian Cox process models, a
+  synthetic demo, tests, and the catalogs, tables and figures of the study of
+  the Eastern Mediterranean and Middle East (1940-2025).
+keywords:
+  - compound heatwaves
+  - heatwave typology
+  - spatiotemporal clustering
+  - DBSCAN
+  - PCA ellipses
+  - log-Gaussian Cox process
+  - ERA5 reanalysis
+  - Eastern Mediterranean and Middle East
+authors:
+  - family-names: Bouhamad
+    given-names: Fawaz
+    orcid: "https://orcid.org/0009-0009-4138-6126"
+    affiliation: >-
+      Department of Agricultural and Biological Engineering, University of
+      Florida, Gainesville, Florida, USA
+  - family-names: Najibi
+    given-names: Nasser
+    orcid: "https://orcid.org/0000-0002-0515-7192"
+    affiliation: >-
+      Department of Agricultural and Biological Engineering, University of
+      Florida, Gainesville, Florida, USA
+references:
+  - type: data
+    title: "Processed ERA5 daily maximum temperature data for SCORCH, 1940-2025"
+    authors:
+      - family-names: Bouhamad
+        given-names: Fawaz
+      - family-names: Najibi
+        given-names: Nasser
+    year: 2026
+    version: 1.0.0
+    doi: "10.5281/zenodo.21717874"
+    repository: "https://zenodo.org/records/21717874"
+    notes: >-
+      Input of the study reproduction. Contains modified Copernicus Climate
+      Change Service information 2026 (ERA5); the processing is CC BY 4.0.
+  - type: unpublished
+    title: "Understanding Compound Space-Time Typologies of Large-Scale Extreme Heatwaves"
+    authors:
+      - family-names: Bouhamad
+        given-names: Fawaz
+      - family-names: Najibi
+        given-names: Nasser
+    year: 2026
+    notes: Manuscript in preparation; cite the published article once available.

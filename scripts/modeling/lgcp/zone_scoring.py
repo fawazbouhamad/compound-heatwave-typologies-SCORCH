@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Shared calculations for centroid concentration and validation zones.
 
 Reads: Called by LGCP and Appendix C scripts.

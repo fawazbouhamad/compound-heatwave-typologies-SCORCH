@@ -43,10 +43,20 @@ fc080880b6f2065fb5eec9fe9dce71abdfdc44a72d1ae91e50abdd278fadaa90
 
 ### 2. Prepare Python, R and the figure tools
 
-The verified runs used **Windows, Python 3.12.10 and R 4.5.1**. Obtain the
-main package-version and installation record from the authors, and use it to
-prepare the required Python and R packages. This record is maintained
-separately from the repository. Other operating systems have not been verified.
+The verified runs used **Windows 11, Python 3.12.10 and R 4.5.1**. The
+exact package versions are recorded in the repository: install them as
+described in [docs/installation.md](../../docs/installation.md), in short
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements/core.txt -r requirements/figures.txt
+.\.venv\Scripts\python.exe -m pip install -e .
+& "C:\Program Files\R\R-4.5.1\bin\Rscript.exe" environment/install_r_packages.R --exact
+```
+
+Linux and macOS are exercised by the continuous-integration workflow with the
+same package versions; the full study reproduction has been verified on
+Windows (see [docs/reproduction_record.md](../../docs/reproduction_record.md)).
 
 The commands below assume the main Python environment is named `.venv` in the
 repository root. Set these interpreter paths in the same PowerShell session,
@@ -57,9 +67,11 @@ $py = ".\.venv\Scripts\python.exe"
 $r = "C:\Program Files\R\R-4.5.1\bin\Rscript.exe"
 ```
 
-Study settings are already recorded in the [Python helpers](../../scripts/main_workflow/helpers/functions.py)
-and [R model scripts](../../scripts/modeling/). No setting changes are needed to
-reproduce the manuscript analysis.
+Study settings are recorded in [config/manuscript_settings.yml](../../config/manuscript_settings.yml)
+and in the [scorch package](../../src/scorch/config.py); the R model scripts
+carry their own copies of the model settings. No setting changes are needed
+to reproduce the manuscript analysis. The five catalog stages of Step 3 can
+also be run with one command, `scorch run`, which gives the same files.
 
 For matching plot typography, supply the two Abadi font files listed in the
 [font inventory](../additional_inputs/figure_assets/font_files.csv).

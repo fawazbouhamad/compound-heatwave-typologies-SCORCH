@@ -1,0 +1,41 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "SCORCH: Spatiotemporal Classification of Regional Compound Heatwaves",
+  "description": "SCORCH identifies regionally extensive compound heatwaves in daily maximum temperature fields: local heatwaves at every grid cell, regionally extensive days, DBSCAN clusters of heatwave cells, PCA ellipses with temperature-weighted centroids, and compound events of four types. Includes the R scripts of the power-law and log-Gaussian Cox process models, a synthetic demo, tests and the study results for the Eastern Mediterranean and Middle East (1940-2025).",
+  "version": "1.0.0",
+  "datePublished": "2026-10-11",
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "codeRepository": "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH",
+  "issueTracker": "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH/issues",
+  "readme": "https://github.com/fawazbouhamad/compound-heatwave-typologies-SCORCH/blob/main/README.md",
+  "programmingLanguage": ["Python", "R"],
+  "runtimePlatform": ["Python 3.11 or newer", "R 4.5"],
+  "operatingSystem": ["Windows", "Linux", "macOS"],
+  "softwareRequirements": [
+    "numpy", "pandas", "scipy", "scikit-learn", "netCDF4", "cftime", "pyshp", "PyYAML",
+    "R packages spatstat.geom, spatstat.model, spatstat.explore, jsonlite, poweRlaw (models)"
+  ],
+  "developmentStatus": "active",
+  "keywords": ["compound heatwaves", "heatwave typology", "spatiotemporal clustering", "DBSCAN",
+               "PCA ellipses", "log-Gaussian Cox process", "ERA5 reanalysis",
+               "Eastern Mediterranean and Middle East"],
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0009-4138-6126",
+      "givenName": "Fawaz",
+      "familyName": "Bouhamad",
+      "affiliation": {"@type": "Organization", "name": "Department of Agricultural and Biological Engineering, University of Florida"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-0515-7192",
+      "givenName": "Nasser",
+      "familyName": "Najibi",
+      "affiliation": {"@type": "Organization", "name": "Department of Agricultural and Biological Engineering, University of Florida"}
+    }
+  ],
+  "maintainer": {"@type": "Person", "@id": "https://orcid.org/0009-0009-4138-6126", "givenName": "Fawaz", "familyName": "Bouhamad"},
+  "relatedLink": ["https://doi.org/10.5281/zenodo.21717874"]
+}

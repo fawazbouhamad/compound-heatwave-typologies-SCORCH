@@ -1,0 +1,38 @@
+# Text files are stored with LF line endings; the scripts also write LF, so
+# catalog checksums are the same on every operating system.
+* text=auto eol=lf
+*.py text eol=lf
+*.R text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.cff text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+
+# Binary files
+*.png binary
+*.gif binary
+*.pdf binary
+*.nc binary
+*.rds binary
+*.shp binary
+*.shx binary
+*.dbf binary
+*.prj binary
+*.cpg binary
+*.ttf binary
+*.pptx binary
+
+# Supplied files that were written with CRLF line endings are kept byte for byte.
+"supporting_files/extra_analysis/centroid_weighting/Moving Weighted Centroid.py" -text
+supporting_files/extra_analysis/centroid_weighting/centroid_method_comparison_summary_2010-08-01_to_2010-08-21.csv -text
+supporting_files/extra_analysis/clustering_method_comparison/method_summary.csv -text
+supporting_files/extra_analysis/dbscan_eps_grid_comparison/overall_method_comparison_summary.csv -text
+supporting_files/extra_analysis/lgcp_covariate_comparison/grid_predicted_intensity_all_variants.csv -text
+supporting_files/extra_analysis/lgcp_covariate_comparison/lgcp_model_parameters.csv -text
+supporting_files/extra_analysis/lgcp_covariate_comparison/tmax_covariate_correlations.csv -text
+supporting_files/extra_analysis/regional_day_threshold/regional_day_selection_sensitivity.csv -text
+supporting_files/supporting_information/station_comparison/input/ghcnd_aswan_EG000062414.csv -text

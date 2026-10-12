@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 # Fit the five validation models using the shared LGCP functions.
 # Reads: Prepared LGCP inputs, fold assignments, and the full-data LGCP fit.
 # Writes: supporting_files/additional_results/modeling/lgcp/validation/

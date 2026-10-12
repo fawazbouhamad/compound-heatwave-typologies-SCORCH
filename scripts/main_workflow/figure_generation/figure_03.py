@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure 3: maps of the 753 heatwave ellipses.
 
 The five maps show (a) centroids and ellipse axes, (b) overlapping ellipse

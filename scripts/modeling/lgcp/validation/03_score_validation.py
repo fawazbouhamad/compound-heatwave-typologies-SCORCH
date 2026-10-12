@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Score the held-out centroids against each fold's intensity zones.
 
 Reads: Prepared LGCP inputs and Appendix C fold predictions.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Draw one day of a compound event for Figures 5–7 and S1.
 
 Heatwave cells are orange for DBSCAN clusters and grey for noise. Each cluster

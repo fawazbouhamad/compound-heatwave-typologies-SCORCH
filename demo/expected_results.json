@@ -1,0 +1,52 @@
+{
+  "description": "Expected results of 'scorch demo' with the recorded seed; checked by tests/test_demo.py.",
+  "seed": 20261011,
+  "grid_cells": 320,
+  "dates": 732,
+  "regional_threshold_cells": 51,
+  "selected_days": 19,
+  "events_by_type": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 2
+  },
+  "events": [
+    {
+      "start_date": "1991-07-10",
+      "end_date": "1991-07-10",
+      "event_type": 1,
+      "daily_cluster_counts": "1"
+    },
+    {
+      "start_date": "1991-08-12",
+      "end_date": "1991-08-15",
+      "event_type": 3,
+      "daily_cluster_counts": "1-1-1-1"
+    },
+    {
+      "start_date": "1992-06-20",
+      "end_date": "1992-06-20",
+      "event_type": 2,
+      "daily_cluster_counts": "2"
+    },
+    {
+      "start_date": "1992-08-03",
+      "end_date": "1992-08-06",
+      "event_type": 4,
+      "daily_cluster_counts": "1-2-2-2"
+    },
+    {
+      "start_date": "1993-07-15",
+      "end_date": "1993-07-17",
+      "event_type": 3,
+      "daily_cluster_counts": "2-2-2"
+    },
+    {
+      "start_date": "1994-07-20",
+      "end_date": "1994-07-25",
+      "event_type": 4,
+      "daily_cluster_counts": "1-1-2-2-2-1"
+    }
+  ]
+}

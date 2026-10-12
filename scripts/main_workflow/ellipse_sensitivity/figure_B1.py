@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure B1: ellipse purity across axis scales.
 
 Writes the full PNG and its panels to output/figures/figure_B1/.

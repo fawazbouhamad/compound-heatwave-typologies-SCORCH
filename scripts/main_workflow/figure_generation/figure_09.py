@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure 9: mean ellipse geometry for the 51 compound events.
 
 Area and axis ratio use arithmetic means; orientation uses an axial mean

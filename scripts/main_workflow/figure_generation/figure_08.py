@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure 8: ellipse geometry by compound-event type.
 
 Histograms and box plots show axis ratio, area (million km2) and major-axis

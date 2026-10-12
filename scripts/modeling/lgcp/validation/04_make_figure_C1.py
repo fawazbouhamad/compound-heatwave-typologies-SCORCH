@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Draw Figure C1 from the five-fold validation results.
 
 Reads: Prepared LGCP inputs and Appendix C results.
@@ -83,7 +84,8 @@ def main():
     grid["area_km2"] = zs.cell_area_km2(grid["lat"])
     cen = pd.read_csv(LGCP_INPUT_DIR / "centroids.csv")
     n_cen = len(cen)
-    assert n_cen == 753, n_cen
+    n_ellipses = len(pd.read_csv(f.catalog_dir(config, "04_extreme_heatwave_ellipses") / "ellipses.csv"))
+    assert n_cen == n_ellipses, (n_cen, n_ellipses)
 
     pc = pd.read_csv(OUTPUT_DIR / "validation_per_centroid.csv").sort_values(
         "ellipse_id").reset_index(drop=True)

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Figure 4: compound heatwave typology.
 
 Exports the editable PowerPoint and its panels to output/figures/figure_4/.

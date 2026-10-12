@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# SPDX-License-Identifier: GPL-3.0-only
 """Shared fonts, colours, panel labels and map layers for the figures.
 
 Original fonts can be supplied with SCORCH_SLIDE_FONT_DIR; map layers are bundled.
