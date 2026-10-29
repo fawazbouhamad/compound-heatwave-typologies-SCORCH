@@ -1,0 +1,2 @@
+dataset,method,config,n,n_tail,xmin,alpha,distance_definition,distance,p_value,reps,n_failed,n_valid,n_flagged,mc_se,seed,seconds,obs_fit_noise_flag,obs_pl_in_range,obs_pl_noise_flag,package_version,status,note
+event_maxima,M4 powerlaw 2.0.0 (ADJUSTED: alpha upper bound removed),adjusted-alpha,51,19,3585652.395054665,5.348092382353047,powerlaw native KS (D),0.13542915906538444,0.153,5000,0,5000,0,0.005090992044778699,20261590,96.764,False,True,False,2.0.0,ok,LR vs lognormal R=-0.5674 p=0.5705; vs exponential R=-0.8335 p=0.4046
