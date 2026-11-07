@@ -1,0 +1,61 @@
+REGIONAL-DAY THRESHOLD COMPARISON
+
+What was tested?
+----------------
+This comparison checked how strict the selection of regionally extensive
+heatwave days should be. It counted heatwave grid cells on each of the
+15,738 April-September days from 1940 to 2025, including days with no
+heatwave cells, and tested cutoffs in that distribution of daily counts.
+
+This threshold is separate from the local 95th-percentile temperature
+threshold used to identify heatwaves at individual grid cells.
+
+Methods
+-------
+Three regional percentiles were tested: the 95th, 97.5th and 99th. A higher
+percentile keeps fewer days with more widespread heatwave conditions.
+
+Each percentile was calculated in three ways:
+- higher: use the observed count at the upper of the two neighbouring
+  positions around the percentile rank.
+- nearest: use the observed count at the nearest position.
+- linear: interpolate between the neighbouring counts. This can give a
+  fractional cutoff even though the number of cells is an integer.
+
+A day is selected when its heatwave-cell count is at least the cutoff.
+
+What the file shows
+-------------------
+regional_day_selection_sensitivity.csv has nine rows, one for each
+percentile/method combination. It records the cutoff, number and fraction
+of selected days, and their mean, maximum and minimum heatwave-cell counts.
+The column names containing "circles" refer to grid cells in the earlier
+maps, not to ellipses or events.
+
+The saved results are:
+
+Percentile   Method(s)          Cutoff in cells   Selected days
+95th         higher                     277.00             787
+95th         nearest                    276.00             790
+95th         linear                     276.15             787
+97.5th       all three                   371.00             395
+99th         higher / nearest            484.00             158
+99th         linear                     483.26             158
+
+At the selected 97.5th percentile, all three calculation methods agree on
+the cutoff of 371 cells. The 395 retained days account for about 2.51% of
+the warm-season dates. Ties in integer counts mean the retained fraction
+does not have to be exactly 2.5%.
+
+Choice used in the study and why
+-------------------------------
+The study uses the 97.5th percentile with the higher method: at least 371
+of the region's 1,800 cells must be experiencing a heatwave on a selected
+day. This is about 20.6% of the grid cells, not an area-weighted percentage.
+
+This choice focuses the analysis on widespread days while retaining more
+days than the 99th-percentile cutoff. The higher method also gives an
+observed integer count. Agreement among all three methods at 97.5% shows
+that this particular cutoff is insensitive to the interpolation choice.
+It is a study-design choice; this table does not identify a uniquely optimal
+percentile. The selected days become Catalog 2 and feed the clustering step.

@@ -1,0 +1,19 @@
+statistic,group,model,reproduced_value,reproduced_as_printed,manuscript,matches
+share in top 10% zone,all_centroids,fitted to all 753 centroids,18.99070385126162,19.0%,19.0%,True
+share in top 20% zone,all_centroids,fitted to all 753 centroids,35.45816733067729,35.5%,35.5%,True
+share in top 30% zone,all_centroids,fitted to all 753 centroids,46.34794156706507,46.3%,46.3%,True
+share in top 50% zone,all_centroids,fitted to all 753 centroids,71.31474103585657,71.3%,71.3%,True
+share in top 10% zone,all_centroids,cross-validation (withheld centroids),18.99070385126162,19.0%,19.0%,True
+share in top 20% zone,all_centroids,cross-validation (withheld centroids),35.3253652058433,35.3%,35.3%,True
+share in top 30% zone,all_centroids,cross-validation (withheld centroids),46.480743691899065,46.5%,46.5%,True
+share in top 50% zone,all_centroids,cross-validation (withheld centroids),70.6507304116866,70.7%,70.7%,True
+mean distance to top 10% zone,all_centroids,fitted to all 753 centroids,332.29206495794705,332.3 km,332.3 km,True
+mean distance to top 20% zone,all_centroids,fitted to all 753 centroids,214.74422663990265,214.7 km,214.7 km,True
+mean distance to top 30% zone,all_centroids,fitted to all 753 centroids,147.09034742418547,147.1 km,147.1 km,True
+mean distance to top 50% zone,all_centroids,fitted to all 753 centroids,62.826509769210844,62.8 km,62.8 km,True
+mean distance to top 10% zone,all_centroids,cross-validation (withheld centroids),347.4176901832994,347.4 km,347.4 km,True
+mean distance to top 20% zone,all_centroids,cross-validation (withheld centroids),215.9254699455362,215.9 km,215.9 km,True
+mean distance to top 30% zone,all_centroids,cross-validation (withheld centroids),148.8828186999589,148.9 km,148.9 km,True
+mean distance to top 50% zone,all_centroids,cross-validation (withheld centroids),64.79835680764955,64.8 km,64.8 km,True
+share in top 20% zone (conclusion),all_centroids,cross-validation (withheld centroids),35.3253652058433,35%,35%,True
+share in top 20% zone (conclusion),event_largest,cross-validation (withheld centroids),54.90196078431373,55%,55%,True

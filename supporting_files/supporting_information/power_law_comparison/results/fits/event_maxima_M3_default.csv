@@ -1,0 +1,2 @@
+dataset,method,config,n,n_tail,xmin,alpha,distance_definition,distance,p_value,reps,n_failed,n_valid,mc_se,seed,seconds,package_version,status,note
+event_maxima,M3 poweRlaw 1.0.0 (strict defaults; xmax=1e5),strict-default,51,NA,NA,NA,poweRlaw native KS,NA,NA,5000,NA,NA,NA,20261569,0.000,1.0.0,no_usable_fit,estimate_xmin returned no finite cutoff with xmax=1e+05

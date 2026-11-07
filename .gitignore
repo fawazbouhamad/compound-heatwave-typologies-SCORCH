@@ -1,0 +1,19 @@
+# Local Python environments and generated interpreter files
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Downloaded study input and machine-specific run records
+/input/
+/.scorch/
+
+# Operating-system and temporary Office files
+.DS_Store
+Thumbs.db
+~$*
